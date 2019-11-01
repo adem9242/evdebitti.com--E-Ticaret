@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "uyeol";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+<html>
+<head>
+    
+    <style>
+
+        .adi
+        {
+            width:30%;
+            height:675px;
+            background-color:white;
+            margin:0 auto;
+            padding:50px;
+
+        }
+    </style>
+
+</head>
+<body>
+    <!-- /NAVIGATION -->
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/Home">Anasayfa</a></li>
+                <li class="active">Üye ol</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /BREADCRUMB -->
+    <!-- section -->
+    <div style="background-color:lightgrey" class="section">
+        <!-- container -->
+        <div style="background-color:lightgrey" class="container">
+            <!-- row -->
+            <div class="row">
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /section -->
+    <div style="margin:0 auto; width:100%;height:915px;background-color:lightgrey;">
+        <form style="width:100%;" class="form-horizontal">
+
+            <!-- Form Name -->
+
+
+            <div style="width:100%;height:915px;">
+                <div class="adi">
+                    <h2 style="text-align:center;">E-Posta ile Hesap Oluştur</h2>
+                    <input style="margin:2em  auto ;width:100%; height:3.5em;" id="name" name="name" type="text" placeholder=" Adı *" class="form-control input-md" required="">
+                    <input style="margin:2em  auto ;width:100%; height:3.5em;" id="name" name="name" type="text" placeholder=" Soyadı *" class="form-control input-md" required="">
+                    <input style="margin:2em  auto ;width:100%; height:3.5em;" id="name" name="name" type="text" placeholder=" E-Posta Adresi *" class="form-control input-md" required="">
+                    <input style="margin:2em  auto ;width:100%; height:3.5em;" id="name" name="name" type="text" placeholder=" Şifre *" class="form-control input-md" required="">
+                    <input style="margin:2em  auto ;width:100%; height:3.5em;" id="name" name="name" type="text" placeholder=" Şifre(Tekrar) *" class="form-control input-md" required="">
+                    <input style="margin:2em  auto ;width:100%; height:3.5em;" id="name" name="name" type="text" placeholder=" Cep Telefonu *" class="form-control input-md" required="">
+                    <button style="background-color:#ff6633;width:100%;height:3.5em ;margin:2em auto" id="save" name="save" class="btn btn-warning">Üye Ol</button>
+                    <br />
+
+
+
+                </div>
+                <div style="padding:50px;margin:0 auto;width:30%;height:5em; background-color:lightsteelblue;">
+
+                    <h3 style="display:inline;margin-top:-20px"><b> Zaten Üyemisiniz? </b></h3>
+                    <a href="/Home/oturumac" style="font-size:14px;margin:-15px auto;float:right;width:35%;height:3.5em ;" id="save" name="save" class="btn btn-success">Giriş Yap</a>
+                </div>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+
+
+</body>
+</html>
+
+
+

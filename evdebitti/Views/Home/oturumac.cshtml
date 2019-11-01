@@ -1,0 +1,182 @@
+﻿
+@{
+    ViewBag.Title = "oturumac";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<html>
+
+<head>
+    @*<link href="~/css/compressedaccountoturumac.css" rel="stylesheet" />*@
+    <link href="~/css/accountgirisyap.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+    <!-- /NAVIGATION -->
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/Home">Anasayfa</a></li>
+                <li class="active">Giriş yap</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /BREADCRUMB -->
+    <!-- section -->
+    <div style="background-color:lightgrey" class="section">
+        <!-- container -->
+        <div style="background-color:lightgrey" class="container">
+            <!-- row -->
+            <div class="row">
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /section -->
+    <div style="width:100%;height:615px;background-color:lightgrey;">
+        <div style="margin-top:-35px;" class="container container_1180">
+
+
+            <input type="hidden" class="module" value="login">
+
+            <div id="content" class="form registerFormFieldset loginPage">
+
+                <div id="loginContainer" class="">
+                    <div class="fieldset">
+                        <div class="leftBlock">
+                            <div class="blockWrap">
+
+                                <h2>Giriş Yap</h2>
+
+                                <a class="quickLogin " href="https://mobcon.turkcell.com.tr/mobileconnect/oauth/authorize?client_id=n11&amp;scope=openid%20phone%20email%20profile&amp;redirect_uri=https%3A%2F%2Fwww.n11.com%2Fmobileconnect%2FauthorizeCallback&amp;response_type=code&amp;state=State0.sDUxGpcjRVg1H2zNtLI&amp;nonce=Nonce0.ac8EUauriYUSm1m8HbU&amp;prompt=login&amp;acr_values=2&amp;display=page&amp;ui_locales=tr&amp;claims_locales=tr">
+                                    @*<i class="quickIcon"></i>*@
+                                    Hızlı Giriş
+                                </a>
+                                <div class="errorMessage" data-errormessagefor="quickLogin">
+                                    <div class="errorText"></div>
+                                </div>
+
+
+                                <div class="facebook_large medium facebookBtn  btnLogin" data-connecturl="https://www.n11.com/social/facebookRouter?source=WEB_REGULAR_FB&amp;scope=email,user_birthday">
+                                    <i></i>
+                                    Facebook ile Giriş Yap
+                                </div>
+
+                                <div class="loginSeperator">
+                                    VEYA
+                                </div>
+
+                                <form id="loginForm" class="well form-horizontal" action="https://www.n11.com/giris-yap" method="post">
+                                    <div class="inputField ">
+                                        <input style=" height:55px;" type="text" id="email" name="email" value="" autocomplete="off" data-validation="required email" data-maxlength="100" maxlength="100" data-required-message="Lütfen e-posta adresinizi girin." required="" tabindex="1">
+                                        <label for="email">
+                                            E-Posta Adresi
+                                        </label>
+                                        <div class="errorMessage" data-errormessagefor="email">
+                                            <div class="errorText"></div>
+                                        </div>
+                                    </div>
+                                    <div class="inputField ">
+
+                                        <input style=" height:55px;" type="password" name="password" id="password" autocomplete="off" data-validation="required minlength maxlength" data-minlength="6" data-maxlength="15" required="" tabindex="2">
+                                        <label for="password">
+                                            Şifre
+                                        </label>
+                                        <div class="showPass">Göster</div>
+                                        <div class="errorMessage" data-errormessagefor="password">
+                                            <div class="errorText"></div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="inputfield loginSection">
+                                        <span id="forgotPassword" class="forgotPassword" tabindex="4">Şifremi Unuttum</span>
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="rememberMe" name="rememberMe" tabindex="3">
+                                            <label class="rememberMe" for="rememberMe" type="checkbox">
+                                                Beni Unutma
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div style="background-color:green;" id="loginButton" class="green_flat">Giriş Yap</div>
+                                    <input type="hidden" id="returnUrl" name="returnUrl" value="">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="rightBlock">
+                            <div class="blockWrap">
+                                <div class="signupBenefits">
+                                    <h2>Üye Değil misiniz?</h2>
+                                    <p>Hemen üye olun, indirimli alışverişin keyfini çıkarın! </p>
+                                    <ul class="registerInformation">
+                                        <li>
+                                            <i class="icoFreeShop"></i>
+                                            <strong>Avantajlı Alışveriş</strong>
+                                            İndirim, kupon ve daha birçok özel fırsat içeride sizi bekliyor.<br>
+                                        </li>
+                                        <li>
+                                            <i class="icoShopping"></i>
+                                            <strong>Bol Çeşit, Kolay Erişim</strong>
+                                            Milyonlarca ürün ve binlerce mağaza arasında aradığınıza kolayca ulaşın.<br>
+                                        </li>
+                                        <li>
+                                            <i class="secureShopping"></i>
+                                            <strong>Güvenli Platform</strong>
+                                            Ürün size ulaştıktan sonra sizin onayınızla ödemeniz mağazaya aktarılır.<br>
+                                        </li>
+                                    </ul>
+                                    <div style="margin-top:20px;" class="signUpButton">
+
+                                        <a href="/Home/uyeol" class="black_flat">
+                                            Üye Ol
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="forgotPasswordModalWrapper" class="popupWrapper forgotPassword"></div>
+
+            <div id="activationModalWrapper" class="popupWrapper forgotPassword">
+                <div class="popupHeader">
+                    <h3 class="header">Üyelik İşlemi Tamamlanmamış</h3>
+                    <span class="closePopup"></span>
+                </div>
+                <div class="popupContent">
+                    <div class="formContainer">
+                        <p>
+                            Aktivasyon linkinin üye olurken belirttiğiniz e-posta adresinize tekrar gönderilmesi için Gönder butonuna basın. Üyelik işleminizi tamamlamak için lütfen e-posta kutunuzu kontrol edin.
+                        </p>
+                        <p style="display:none">
+                            E-posta adresinize onay linki yollanmıştır. Üyeliğinizi etkinleştirmek için lütfen e-posta kutunuzu kontrol ediniz.
+                        </p>
+                    </div>
+                </div>
+                <div class="popupFooter">
+                    <a class="button medium black" id="sendActivationForBtn">
+                        Gönder
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+

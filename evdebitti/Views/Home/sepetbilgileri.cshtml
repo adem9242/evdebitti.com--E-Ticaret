@@ -1,0 +1,82 @@
+﻿
+@model List<evdebitti.Models.C_SEPET>
+   
+<script>
+    $(document).ready(function myfunction(){
+        $(".cancel-btn").click(function Urunsil(){
+
+            var suid=$(this).attr("name");
+            
+                    $.ajax({
+                    type:"GET",
+                    url:"/Home/sepeturunsil",
+                    data: {id:suid },
+                    success:function myfunction() { 
+                        $.ajax({
+                                     type:"GET",
+                                     url:"/Home/sepetbilgileri",
+                                         success:function Verigetir(data){
+                                         $(".header-cart").html('');
+                                         $(".header-cart").html(data);
+                                         }
+                                    });
+                    },
+                    error:function myfunction() { 
+                    alert("hata");
+                    },
+    
+                   });
+
+        });
+
+    });
+</script>
+
+
+        <li style="margin-left:10px;" class="header-cart dropdown default-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                <div class="header-btns-icon">
+                    <i class="fa fa-shopping-cart"></i>
+                        <span style="background-color:red;" class="qty">@ViewBag.sepeturunsayisi</span>  
+                </div>
+                <strong class="text-uppercase">SEPETİM</strong>
+                <br>
+                    <span style="font-size:16px;">@ViewBag.toplam ₺</span>
+            </a>
+            <div class="custom-menu">
+                <div id="shopping-cart">
+                    @if(ViewBag.sepeturunsayisi==0)
+                    {
+                        <p style="font-size:18px;text-align:center;">Sepetinizde ürün bulunmamaktadır.</p>
+                    }
+                    else
+                    {
+                        <div class="shopping-cart-list">
+                            @foreach (var item in Model)
+                            {
+
+                                <div class="product product-widget">
+                                    <div class="product-thumb">
+                                        <img src="@item.S_URUNRESIM" alt="">
+                                    </div>
+                                    <div class="product-body">
+                                        <h3 class="product-price">@item.S_URUNFIYAT &nbsp;TL <span class="qty">@item.S_URUNADET &nbsp;X Adet</span></h3>
+                                        <h2 class="product-name">@item.S_URUNADI<a href="#"></a></h2>
+                                    </div>
+                                    <button name="@item.S_URUNID" class="cancel-btn"><i class="fa fa-trash"></i></button>
+                                </div>
+                            }
+
+                        </div>
+                    }
+                    
+                    <div class="shopping-cart-btns">
+                        <button onclick="location.href='/Home/Sepetigoruntule';"  style="width:100%;" class="main-btn">SEPETİ GÖRÜNTÜLE</button>
+                        @*<button class="primary-btn">Ödeme <i class="fa fa-arrow-circle-right"></i></button>*@
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+
